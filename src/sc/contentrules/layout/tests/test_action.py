@@ -6,14 +6,21 @@ from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 
 from zope.interface import implements
-from zope.component import getUtility, getMultiAdapter
+from zope.component import getUtility
+from zope.component import getMultiAdapter
+
 from zope.component.interfaces import IObjectEvent
+
+from zope.schema.interfaces import IVocabularyFactory
 
 from plone.app.contentrules.rule import Rule
 
 from plone.contentrules.engine.interfaces import IRuleStorage
 from plone.contentrules.rule.interfaces import IRuleAction
+from plone.contentrules.rule.interfaces import IRuleCondition
 from plone.contentrules.rule.interfaces import IExecutable
+
+from sc.contentrules.layout.config import VOCAB
 
 from sc.contentrules.layout.actions.layout import SetLayoutAction
 from sc.contentrules.layout.actions.layout import SetLayoutEditForm
