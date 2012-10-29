@@ -16,14 +16,14 @@
     <include package="plone.app.contentrules" />
 
     <!-- Forms -->
-    <browser:page 
+    <browser:page
       for="plone.app.contentrules.browser.interfaces.IRuleActionAdding"
       name="sc.contentrules.actions.layout"
       class=".actions.layout.SetLayoutAddForm"
       permission="cmf.ManagePortal"
       />
 
-    <browser:page 
+    <browser:page
       for="sc.contentrules.layout.interfaces.ISetLayoutAction"
       name="edit"
       class=".actions.layout.SetLayoutEditForm"
@@ -34,7 +34,7 @@
     <adapter factory=".actions.layout.SetLayoutActionExecutor" />
     <plone:ruleAction
         name="sc.contentrules.actions.layout"
-        title="Set layout action"
+        title="Set layout"
         description="Sets a layout for a content item."
         for="*"
         event="zope.component.interfaces.IObjectEvent"
