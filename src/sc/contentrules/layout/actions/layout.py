@@ -58,6 +58,10 @@ class SetLayoutActionExecutor(object):
         pt = self._ptools.types()
         layout = self.element.layout
 
+        if layout == '_default_view':
+            # Do nothing, leave layout with default view
+            return True
+
         # Get event object
         obj = self.event.object
 
