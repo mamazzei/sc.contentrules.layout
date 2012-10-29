@@ -21,6 +21,9 @@ from Products.CMFCore.utils import getToolByName
 
 from plone.contentrules.rule.interfaces import IRule
 from plone.app.contentrules.conditions.portaltype import IPortalTypeCondition
+
+from sc.contentrules.layout.interfaces import ISetLayoutAction
+
 from sc.contentrules.layout import MessageFactory as _
 
 logger = logging.getLogger('sc.contentrules.layout')
@@ -34,9 +37,12 @@ class ViewsVocabulary(object):
 
     def _get_rule(self, context):
         ''' Return rule that contains the action '''
-        rule = aq_parent(context)
-        if IRule.providedBy(rule):
-            return rule
+        rule = None
+        if ISetLayoutAction.providedBy(context):
+            rule = aq_parent(context)
+        elif IRule.providedBy(context):
+            rule = context
+        return rule
 
     def _get_portal_types(self, rule):
         ''' Return a portal type condition for
