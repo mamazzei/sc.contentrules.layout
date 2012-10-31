@@ -16,45 +16,45 @@ msgstr ""
 
 #: sc/contentrules/layout/actions/layout.py:95
 msgid "Add set layout content rules action"
-msgstr ""
+msgstr "Adiciona uma ação de regra de conteúdo para a visão padrão de um conteúdo."
 
 #: sc/contentrules/layout/actions/layout.py:96
 msgid "An action to set the layout for content items"
-msgstr ""
+msgstr "Ação de regra de conteúdo para definir visão padrão de um item de conteúdo."
 
 #: sc/contentrules/layout/actions/layout.py:97
 msgid "Configure action"
-msgstr ""
+msgstr "Configurar ação"
 
 #: sc/contentrules/layout/vocabulary.py:102
 msgid "Default Content View"
-msgstr ""
+msgstr "Visão padrão do conteúdo"
 
 #: sc/contentrules/layout/actions/layout.py:152
 msgid "Edit the set layout content rules action"
-msgstr ""
+msgstr "Edita uma ação de regra de conteúdo para a visão padrão de um conteúdo."
 
 #: sc/contentrules/layout/interfaces.py:12
 msgid "Layout"
-msgstr ""
+msgstr "Visão"
 
 #: sc/contentrules/layout/actions/layout.py:74
 msgid "Layout ${layout} is not available for ${portal_type}."
-msgstr ""
+msgstr "Visão ${layout} não está disponível para o tipo ${portal_type}"
 
 #: sc/contentrules/layout/interfaces.py:13
 msgid "Select the layout to be applied to the content item. If no Content Type condition was created for this rule, only Default View will be available. Also, if more than one content type is selected in the  Type condition, an intersection of all selected content type views will be available to this action."
-msgstr ""
+msgstr "Seleciona uma visão para ser aplicada a um conteúdo. Caso nenhuma condição de Tipo de Conteúdo foi criada para esta regra apenas a opção de Visão Padrão estará disponível. Além disto, caso mais de um tipo de conteúdo tenha sido escolhido será exibida a interseção das visões de topos os conteúdos."
 
 #: sc/contentrules/layout/actions/layout.py:37
 msgid "Set layout ${layout} to a content item"
-msgstr ""
+msgstr "Define visão ${layout} para um conteúdo."
 
 #: sc/contentrules/layout/actions/layout.py:117
 msgid "The view is not available in that container"
-msgstr ""
+msgstr "A visão não está disponível para esta pasta."
 
 #: sc/contentrules/layout/actions/layout.py:120
 msgid "There were errors"
-msgstr ""
+msgstr "Ocorreram erros"
 
