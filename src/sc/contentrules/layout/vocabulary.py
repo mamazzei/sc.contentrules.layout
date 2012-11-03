@@ -10,10 +10,7 @@ from zope.component import queryMultiAdapter
 from zope.interface import implements
 from zope.interface import Interface
 
-try:
-    from zope.schema.interfaces import IVocabularyFactory
-except ImportError:
-    from zope.app.schema.vocabulary import IVocabularyFactory
+from zope.schema.interfaces import IVocabularyFactory
 
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
 
