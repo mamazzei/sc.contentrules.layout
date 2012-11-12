@@ -155,6 +155,14 @@ class TestViewsVocab(unittest.TestCase):
         vocab = util(rule)
         self.assertEquals(len(vocab.by_token), 6)
 
+    def testRuleWithPTCollection(self):
+        rule = self.rule
+        self._add_condition(rule, types=['Collection', ])
+        self._add_action(rule)
+        util = getUtility(IVocabularyFactory, VOCAB)
+        vocab = util(rule)
+        self.assertEquals(len(vocab.by_token), 6)
+
     def testRuleWithConditionAndTwoTypes(self):
         rule = self.rule
         # Folder and Document have no intersection between their
