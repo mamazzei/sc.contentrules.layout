@@ -18,8 +18,6 @@ from plone.contentrules.rule.interfaces import IExecutable
 from Products.statusmessages.interfaces import IStatusMessage
 
 from sc.contentrules.layout.interfaces import ISetLayoutAction
-from sc.contentrules.layout.exceptions import ViewFail
-
 
 from sc.contentrules.layout import MessageFactory as _
 
@@ -96,52 +94,10 @@ class SetLayoutAddForm(AddForm):
     description = _(u"An action to set the layout for content items")
     form_name = _(u"Configure action")
 
-    def update(self):
-        self.setUpWidgets()
-        self.form_reset = False
-
-        data = {}
-        errors, action = self.handleSubmit(self.actions, data, self.validate)
-        # the following part will make sure that previous error not
-        # get overriden by new errors. This is usefull for subforms. (ri)
-        if self.errors is None:
-            self.errors = errors
-        else:
-            if errors is not None:
-                self.errors += tuple(errors)
-
-        if errors:
-            if (len(errors) == 1) and (isinstance(errors[0], ViewFail)):
-                # We send a message if validation of view is false and
-                # is the only error.
-                self.status = _('The view is not available in that container')
-                result = action.failure(data, errors)
-            else:
-                self.status = _('There were errors')
-                result = action.failure(data, errors)
-        elif errors is not None:
-            self.form_reset = True
-            result = action.success(data)
-        else:
-            result = None
-
-        self.form_result = result
-
     def create(self, data):
         a = SetLayoutAction()
         form.applyChanges(a, self.form_fields, data)
         return a
-
-    def handleSubmit(self, actions, data, default_validate=None):
-
-        for action in actions:
-            if action.submitted():
-                errors = action.validate(data)
-                if errors is None and default_validate is not None:
-                    errors = default_validate(action, data)
-                return errors, action
-
-        return None, None
 
 
 class SetLayoutEditForm(EditForm):
@@ -152,45 +108,3 @@ class SetLayoutEditForm(EditForm):
     label = _(u"Edit the set layout content rules action")
     description = _(u"An action to set the layout for content items")
     form_name = _(u"Configure action")
-
-    def update(self):
-        self.setUpWidgets()
-        self.form_reset = False
-
-        data = {}
-        errors, action = self.handleSubmit(self.actions, data, self.validate)
-        # the following part will make sure that previous error not
-        # get overriden by new errors. This is usefull for subforms. (ri)
-        if self.errors is None:
-            self.errors = errors
-        else:
-            if errors is not None:
-                self.errors += tuple(errors)
-
-        if errors:
-            if (len(errors) == 1) and (isinstance(errors[0], ViewFail)):
-                # We send a message if validation of view is false and
-                # is the only error.
-                self.status = _(u'The view is not available in that container')
-                result = action.failure(data, errors)
-            else:
-                self.status = _(u'There were errors')
-                result = action.failure(data, errors)
-        elif errors is not None:
-            self.form_reset = True
-            result = action.success(data)
-        else:
-            result = None
-
-        self.form_result = result
-
-    def handleSubmit(self, actions, data, default_validate=None):
-
-        for action in actions:
-            if action.submitted():
-                errors = action.validate(data)
-                if errors is None and default_validate is not None:
-                    errors = default_validate(action, data)
-                return errors, action
-
-        return None, None
