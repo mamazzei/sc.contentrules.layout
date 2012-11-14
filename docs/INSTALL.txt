@@ -1,21 +1,16 @@
-Instalação
+Installation
 ------------
 
-Para habilitar a instalação deste produto em um ambiente que utilize o
-buildout:
+To enable this product,on a buildout based installation:
 
-1. Editar o arquivo buildout.cfg (ou outro arquivo de configuração) e
-   adicionar o pacote ``sc.contentrules.layout`` à lista de eggs da instalação::
+    1. Edit your buildout.cfg and add ``sc.contentrules.group``
+       to the list of eggs to install ::
 
-	    [buildout]
-	    ...
-	    eggs =
-	        sc.contentrules.layout
+        [buildout]
+        ...
+        eggs =
+            sc.contentrules.group
 
-2. Após alterar o arquivo de configuração é necessário executar
-   ''bin/buildout'', que atualizará sua instalação.
+After updating the configuration you need to run the ''bin/buildout'',
+which will take care of updating your system.
 
-3. Reinicie o Plone
-
-4. Acesse o painel de controle e instale o produto
-**Brasil.gov.br: Barra de identidade visual do governo**.
