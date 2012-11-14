@@ -1,11 +1,7 @@
-Alterações
+Changelog
 ------------
 
 0.5 (unreleased)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  * Suporte a quatro cores da barra
-    [ericof]
-
-  * Versão inicial do pacote
-  	[ericof]
+  * Initial release [ericof]
