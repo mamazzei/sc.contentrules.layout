@@ -4,7 +4,7 @@ Changelog
 1.0b3 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
-- Nothing changed yet.
+- Remove dependency on zope.app.publisher. [hvelarde]
 
 
 1.0b2 (2012-11-14)
