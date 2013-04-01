@@ -2,7 +2,7 @@
 from Acquisition import aq_parent
 import logging
 
-from zope.app.publisher.interfaces.browser import IBrowserMenu
+from zope.browsermenu.interfaces import IBrowserMenu
 
 from zope.component import getUtility
 from zope.component import queryMultiAdapter
