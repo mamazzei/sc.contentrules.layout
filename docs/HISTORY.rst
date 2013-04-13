@@ -4,6 +4,8 @@ Changelog
 1.0b3 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
+- Support Plone 4.3 [ericof]
+
 - Remove dependency on zope.app.publisher. [hvelarde]
 
 
