@@ -1,25 +1,17 @@
 # -*- coding: utf-8 -*-
 from Acquisition import aq_parent
-import logging
-
+from plone.app.contentrules.conditions.portaltype import IPortalTypeCondition
+from plone.contentrules.rule.interfaces import IRule
+from Products.CMFCore.utils import getToolByName
+from sc.contentrules.layout import MessageFactory as _
 from zope.browsermenu.interfaces import IBrowserMenu
-
 from zope.component import getUtility
 from zope.component import queryMultiAdapter
-
 from zope.interface import implements
 from zope.interface import Interface
-
 from zope.schema.interfaces import IVocabularyFactory
-
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
-
-from Products.CMFCore.utils import getToolByName
-
-from plone.contentrules.rule.interfaces import IRule
-from plone.app.contentrules.conditions.portaltype import IPortalTypeCondition
-
-from sc.contentrules.layout import MessageFactory as _
+import logging
 
 logger = logging.getLogger('sc.contentrules.layout')
 

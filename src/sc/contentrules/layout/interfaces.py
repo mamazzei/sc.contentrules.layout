@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from zope.interface import Interface
-
-from zope.schema import Choice
 from sc.contentrules.layout import MessageFactory as _
+from zope.interface import Interface
+from zope.schema import Choice
 
 
 class ISetLayoutAction(Interface):

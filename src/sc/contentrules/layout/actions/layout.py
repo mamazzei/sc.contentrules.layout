@@ -1,25 +1,16 @@
 # -*- coding: utf-8 -*-
-
 from OFS.SimpleItem import SimpleItem
-
-from zope.component import adapts
-
-from zope.interface import Interface
-from zope.interface import implements
-
-from zope.formlib import form
-
 from plone.app.contentrules.browser.formhelper import AddForm
 from plone.app.contentrules.browser.formhelper import EditForm
-
-from plone.contentrules.rule.interfaces import IRuleElementData
 from plone.contentrules.rule.interfaces import IExecutable
-
+from plone.contentrules.rule.interfaces import IRuleElementData
 from Products.statusmessages.interfaces import IStatusMessage
-
-from sc.contentrules.layout.interfaces import ISetLayoutAction
-
 from sc.contentrules.layout import MessageFactory as _
+from sc.contentrules.layout.interfaces import ISetLayoutAction
+from zope.component import adapts
+from zope.formlib import form
+from zope.interface import implements
+from zope.interface import Interface
 
 
 class SetLayoutAction(SimpleItem):
