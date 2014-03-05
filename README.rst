@@ -64,8 +64,10 @@ Mostly Harmless
 .. image:: https://secure.travis-ci.org/simplesconsultoria/sc.contentrules.layout.png
     :target: http://travis-ci.org/simplesconsultoria/sc.contentrules.layout
 
+.. image:: https://coveralls.io/repos/simplesconsultoria/sc.contentrules.layout/badge.png :target: https://coveralls.io/r/simplesconsultoria/sc.contentrules.layout
+
 Have an idea? Found a bug? Let us know by `opening a support ticket`_.
 
-.. _`opening a support ticket`: https://github.com/collective/sc.contentrules.layout/issues
+.. _`opening a support ticket`: https://github.com/simplesconsultoria/sc.contentrules.layout/issues
 
 .. _`official guide`: http://plone.org/documentation/manual/developer-manual/managing-projects-with-buildout/installing-a-third-party-product
