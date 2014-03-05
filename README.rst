@@ -11,11 +11,6 @@ Overview
 **Content Rules: Set Layout** (sc.contentrules.layout) package provides
 a content rule action to set a layout or default view for a content item.
 
-This package is tested with Travis CI:
-
-.. image:: https://secure.travis-ci.org/simplesconsultoria/sc.contentrules.layout.png
-    :target: http://travis-ci.org/simplesconsultoria/sc.contentrules.layout
-
 Use case
 ---------
 
@@ -53,7 +48,24 @@ Layout
     views for all selected content types
 
 
+Installation
+------------
+
+Include this package in eggs and zcml section of your buildout. For further reference please refer to the `official guide`_.
+
 Requirements
 ------------
 
-    * Plone 4.0.x and above (http://plone.org/products/plone)
+    * Plone 4.2.x and above (http://plone.org/products/plone)
+
+Mostly Harmless
+---------------
+
+.. image:: https://secure.travis-ci.org/simplesconsultoria/sc.contentrules.layout.png
+    :target: http://travis-ci.org/simplesconsultoria/sc.contentrules.layout
+
+Have an idea? Found a bug? Let us know by `opening a support ticket`_.
+
+.. _`opening a support ticket`: https://github.com/collective/sc.contentrules.layout/issues
+
+.. _`official guide`: http://plone.org/documentation/manual/developer-manual/managing-projects-with-buildout/installing-a-third-party-product

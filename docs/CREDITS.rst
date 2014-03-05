@@ -1,6 +1,13 @@
 Contributors
 -----------------
 
-* Érico Andrei [ericof] -- Initial idea
+- Érico Andrei [ericof]
+- Hector Velarde [hvelarde]
+- Avianca (for the space between seats)
 
-* Avianca (for the space between seats)
+
+You can find an updated list of package contributors on `GitHub`_.
+
+Development sponsored by Simples Consultoria.
+
+.. _`GitHub`: https://github.com/collective/sc.contentrules.layout/contributors
